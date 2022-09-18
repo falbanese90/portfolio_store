@@ -14,7 +14,6 @@ app.get('/', function (req: Request, res: Response) {
 // Insert app routes here
 routes_products(app);
 
-
 app.listen(4000, function () {
     console.log(`starting app on: ${address}`);
 });
