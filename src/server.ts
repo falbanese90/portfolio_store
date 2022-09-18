@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import routes_products from './handlers/products';
+import routes_users from './handlers/users';
 
 const app: express.Application = express();
 const address = '0.0.0.0:4000';
@@ -13,6 +14,7 @@ app.get('/', function (req: Request, res: Response) {
 
 // Insert app routes here
 routes_products(app);
+routes_users(app);
 
 app.listen(4000, function () {
     console.log(`starting app on: ${address}`);
